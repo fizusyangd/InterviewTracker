@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<body>
+  <% for(var q=0 ; q<ques.length ; q++){ %>
+    <h3 ><a href=" <%= ques[q].Link %> " ><%= ques[q].Name %></a><h3>
+  <% } %>
+
+<div class="container">
+<a href="#" class="button" id="button">Add Question</a>
+</div>
+
+<div class="popup">
+  <div class="popup-content">
+    <img src="../assets/images.png" alt="Close" class="close">
+    <input type="text" placeholder="Name" class="pop">
+    <input type="text" placeholder="Link" class="pop">
+    <a href="#" class="button">Submit</a>
+  </div>
+</div>
+
+
+<script>
+  document.getElementById("button").addEventListener("click",function(){
+    document.querySelector(".popup").style.display="flex";
+  })
+
+  document.querySelector(".close").addEventListener("click",function(){
+    document.querySelector(".popup").style.display="none";
+  })
+</script>

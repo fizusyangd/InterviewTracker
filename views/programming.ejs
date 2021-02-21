@@ -1,0 +1,9 @@
+<%- include('partials/header'); -%>
+<p>Let's get started</p>
+
+<% for(var i=0;i<topics.length;i++){ %>
+  <% var p= "/programming/"+ topics[i].Name %>
+  <a style="display: block;" href="<%= p %>"><%= topics[i].Name %> </a>
+<% } %>
+
+<%- include('partials/footer'); -%>
